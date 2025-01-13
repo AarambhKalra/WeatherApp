@@ -9,7 +9,7 @@
     tools:context=".MainActivity">
 
 
-    <SearchView
+    <androidx.appcompat.widget.SearchView
         android:id="@+id/searchView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -20,6 +20,8 @@
         android:iconifiedByDefault="false"
         android:queryHint="Search For A City"
         android:searchIcon="@drawable/search"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -28,10 +30,11 @@
         android:id="@+id/cityName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="16dp"
         android:drawableLeft="@drawable/loctaion"
         android:drawablePadding="15dp"
         android:fontFamily="@font/merriweathersans_medium"
+        android:textAllCaps="true"
         android:textColor="@color/black"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="@+id/searchView"
@@ -68,6 +71,7 @@
         android:id="@+id/temp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
         android:fontFamily="@font/merriweathersans_semibold"
         android:text="00:00 °C"
         android:textColor="@color/black"
@@ -146,7 +150,7 @@
         android:layout_width="match_parent"
         android:layout_height="220dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="65dp"
+        android:layout_marginTop="24dp"
         android:layout_marginEnd="16dp"
         android:background="@drawable/backgroundshape"
         app:layout_constraintEnd_toEndOf="parent"
@@ -195,7 +199,7 @@
                     android:textColor="@color/black" />
 
                 <TextView
-                    android:id="@+id/textView11"
+
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="5dp"
@@ -394,6 +398,7 @@
         android:id="@+id/textView12"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="34dp"
         android:text="DESIGN BY \nThe Normals"
         android:textAlignment="center"
         android:textColor="@color/white"
